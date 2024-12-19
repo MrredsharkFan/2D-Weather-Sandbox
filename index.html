@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>2D Weather Sandbox</title>
+	<title>2D Weather Sandbox <b>EXTREMEIST</b> version</title>
 	<script type="text/javascript" src="libraries/dat.gui.min.js"></script>
 	<script type="text/javascript" src="libraries/pako.min.js"></script>
 	<!-- Include the Chart.js library from a CDN -->
@@ -89,7 +89,7 @@
 						<b>Horizontal resolution</b>
 					</td>
 					<td>
-						<input type="range" min="100" max="16000" value="2500" step="100" id="simResSelX" />
+						<input type="range" min="100" max="16000" value="2500" step="50" id="simResSelX" />
 						<output id="simResShowX"></output>
 					</td>
 				</tr>
@@ -114,7 +114,7 @@
 			</table>
 			<input type="button" value="Create New Simulation" onclick="loadData()" />
 			<i>Move the mouse until you see a terrain you like, then just click to
-				start.</i>
+				start. (Higher mouse = More Mountanious terrain)</i>
 		</form>
 
 		<p>
@@ -130,58 +130,8 @@
 		<h3>Example Save Files</h3>
 
 		<p>
-			<a style="color: white" href="./saves/Mountain uplift cell.weathersandbox">Mountain Uplift Cell at
-				sunset</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/480 km map with strong derecho.weathersandbox">480 km map with strong
-				Derecho</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Three Nice Cells.weathersandbox">Three Nice Cells</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Mountain Snow Storm.weathersandbox">Mountain Snow Storm</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Powerful & Longlasting Cell.weathersandbox">Powerful & Longlasting
-				Cell</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Rain Sucked Up.weathersandbox">Powerfull updraft sucking up rain and
-				turning it into hail.</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Powerful Hail and Snow Cells.weathersandbox">Powerful Hail and Snow
-				Cells</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Very nice cell over coastal mountain.weathersandbox">Very nice cell
-				over coastal mountain</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Awesome Convergence Cell.weathersandbox">Awesome Convergence Cell</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Two nice cells in lake valley.weathersandbox">Two nice cells in lake
-				valley</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/Insane CAPE.weathersandbox">Insane CAPE</a>
-		</p>
-
-		<p>
-			<a style="color: white" href="./saves/100 X 100 Test.weathersandbox">100 X 100 Test</a>
+			uhm, I hope you realised that <i>this version</i> is made for extremeists? If you want to see the <div style="color: #AA0000">real</style> savecodes,
+			go to the the real 2D-Weather-Sandbox PLEASE.
 		</p>
 
 
@@ -194,11 +144,14 @@
 			<h2>Tips</h2>
 			<li>Vertical resolution of 300 gives most realistic results</li>
 			<li>Larger horizontal resolutions allow stronger converging winds to develop, forming more realistic, longer
-				lasting cells</li>
+				lasting cells, and more extreme weather probably</li>
 			<li>Performance is mostly GPU dependent, GTX 1070 or better recommended for realtime gameplay</li>
 			<li>If you have a laptop with a dedicated GPU, make sure the browser is actually using it! It's often using
 				the integrated graphics by default</li>
 			<li>Play in fullscreen mode (F11)</li>
+			<li>Also, if you JUST want the extreme weather, use 100 horizontal resolution and 100 vertical resolution, it generates
+				the least lag and the most simple, yet EXTREME results!
+			</li>
 
 			<h2>Controls</h2>
 			<h3>Mouse</h3>
@@ -310,26 +263,12 @@
 
 
 			</table>
-
-			<br />
-			<br />
-
-			<h1>$ Support me on Patreon $</h1>
-			If you love my project and want to support it's future development, please consider supporting me on
-			patreon.
-			<br />
-			Every small amount helps! Thank you!
-
-			<br />
-			<br />
-			<br />
-			<i>By Niels Daemen</i>
 		</div>
 	</div>
 	<canvas id="graphCanvas"></canvas>
 	<canvas id="mainCanvas">
 		Your browser does not support HTML5, you must be using a really old
-		browser!
+		browser! (Go upgrade your computer lol)
 	</canvas>
 </body>
 

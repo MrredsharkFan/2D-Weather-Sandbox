@@ -366,8 +366,8 @@ void main()
           }
         }
       case WALLTYPE_LAND:                                                                                          // no break,can also be fire or urban:
-        water[SOIL_MOISTURE] = clamp(water[SOIL_MOISTURE] + precipDeposition[RAIN_DEPOSITION] * 0.1, 0.0, 1000.0); // rain accumulation
-        water[SNOW] = clamp(water[SNOW] + precipDeposition[SNOW_DEPOSITION] * snowMassToHeight, 0.0, 4000.0);      // snow accumulation in cm
+        water[SOIL_MOISTURE] = clamp(water[SOIL_MOISTURE] + precipDeposition[RAIN_DEPOSITION] * 0.1, 0.0, 1000000000000000000); // rain accumulation
+        water[SNOW] = clamp(water[SNOW] + precipDeposition[SNOW_DEPOSITION] * snowMassToHeight, 0.0, 40000000000000000);      // snow accumulation in cm (btw 4000cm = 40m, which is 15 stories)
 
 
         vec4 baseAboveSurface = texture(baseTex, texCoordX0Yp);
@@ -447,12 +447,9 @@ void main()
         }
         if (numNeighbors > 0.) { // prevent devide by 0
           float avgNeighborTemp = totalNeighborTemp / numNeighbors;
-          base[TEMPERATURE] += (avgNeighborTemp - base[TEMPERATURE]) * 0.25;
+          base[TEMPERATURE] += (avgNeighborTemp - base[TEMPERATURE]) * 0.05;
         }
-        if (base[TEMPERATURE] > 500.0) { // set water temperature for older savefiles
-          base[TEMPERATURE] = CtoK(25.0);
-        }
-        base[TEMPERATURE] = clamp(base[TEMPERATURE], CtoK(0.0), CtoK(maxWaterTemp)); // limit water temperature range
+        base[TEMPERATURE] = clamp(base[TEMPERATURE], CtoK(0.0), 20856365); // limit water temperature range
         break;
       }
     }
