@@ -37,13 +37,13 @@ const saveFileVersionID = 263574036; // Uint32 id to check if save file is compa
 
 const guiControls_default = {
   vorticity : 0.005,
-  dragMultiplier : 0.1, // 1
+  dragMultiplier : 0.01, // 0.1
   wind : -0.0001,
   globalEffectsHeight : 10000,
   globalDrying : 0.000003, // 0.000010
   globalHeating : 0.0,
   sunIntensity : 1.0,
-  waterTemperature : 40.0, // °C
+  waterTemperature : 25.0, // °C
   landEvaporation : 0.00005,
   waterEvaporation : 0.0001,
   evapHeat : 2.90,          //  Real: 2260 J/g
